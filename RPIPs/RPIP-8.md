@@ -58,6 +58,8 @@ We believe all parties are "winning" with this new option.
     for migration
 
 ### Max effective stake vote
+Status: not yet voted
+
 There SHALL be a snapshot vote to define max effective stake.
 The snapshot SHOULD be titled "Max Effective Stake" and SHOULD use "Single choice voting" with the
 following options:
@@ -79,9 +81,17 @@ The Snapshot SHOULD link to <https://dao.rocketpool.net/t/max-collateral-for-leb
 as an argument in favor of "Scale with NO ETH; don't get too close to minimum" and (LINK TBD) as an
 argument in favor of (TBD).
 
-After the conclusion of the snapshot, the "Max effective stake vote" SHALL be removed and the
-"Specification"/"Abstract" sections SHALL be updated to reflect the chosen option. This edit SHALL
-be made, even if the RPIP is already in a "Final" state.
+After the conclusion of the snapshot:
+- The "Specification"/"Abstract" sections SHALL be updated to reflect the chosen option
+- Status in "Max effective stake vote" SHALL be updated to reflect vote result
+- This edit SHALL be made to this RPIP, even if the RPIP is already in a "Final" state
+
+After LEB8 implementation(s):
+- If the implementation matches the chosen option from the snapshot vote:
+  - The "Max effective stake vote" section SHALL be removed and the
+- If the implementation does not match the chosen option from the snapshot vote:
+  - Status in "Max effective stake vote" SHALL be updated to reflect this mismatch
+- This edit SHALL be made to this RPIP, even if the RPIP is already in a "Final" state
 
 ## Rationale
 Based on the `NO supply growth` model in the 
