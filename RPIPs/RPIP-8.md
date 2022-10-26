@@ -62,10 +62,8 @@ Status: not yet voted
 
 There SHALL be a snapshot vote to define max effective stake.
 The snapshot SHOULD be titled "Max Effective Stake" and SHOULD use "Single choice voting" with the
-following options:
-**NOTE: We are planning to go down to 2 options, by choosing one of the first two**
+following two options:
 - Scale with Protocol ETH
-- Flat total collateral per validator
 - Scale with NO ETH; don't get too close to minimum
 - Abstain
 
@@ -74,12 +72,11 @@ The snapshot SHOULD provide the following table as context:
 | **Option Name**                                   | **Formula for max effective RPL stake**                       | **Minipool16** | **LEB8** | **Hypothetical LEB4** | **Hypothetical LEB2** |
 |---------------------------------------------------|---------------------------------------------------------------|----------------|----------|-----------------------|-----------------------|
 | Scale with Protocol ETH                           | `1.5*Protocol_ETH`                                            | 1.6-24         | 2.4-36   | 2.8-42                | 3-45                  |
-| Flat total collateral per validator               | `40 - Node_Operator_ETH`                                      | 1.6-24         | 2.4-32   | 2.8-36                | 3-38                  |
 | Scale with NO ETH; don't get too close to minimum | The larger of:<br>`(1.5*Node_Operator_ETH, .3* Protocol_ETH)` | 1.6-24         | 2.4-12   | 2.8-6                 | 3-6                   |
 
 The Snapshot SHOULD link to <https://dao.rocketpool.net/t/max-collateral-for-lebs/1166?u=valdorff>
 as an argument in favor of "Scale with NO ETH; don't get too close to minimum" and (LINK TBD) as an
-argument in favor of (TBD).
+argument in favor of "Scale with Protocol ETH".
 
 After the conclusion of the snapshot:
 - The "Specification"/"Abstract" sections SHALL be updated to reflect the chosen option
@@ -133,7 +130,9 @@ next step was determining the definition of "effective". Max effective RPL stake
 viewpoints. Most parties involved wanted to make the transition to LEB8s with the minimum possible
 overall impact on the protocol; however, different parties had different perspectives on what that
 meant. Scaling preferences ranged from protocol ETH, to NO ETH, to fixed per validator. See
-discussion on the [forum](https://dao.rocketpool.net/t/max-collateral-for-lebs/1166?u=valdorff)
+discussion on the
+[forum thread proposing primarily NO ETH scaling](https://dao.rocketpool.net/t/max-collateral-for-lebs/1166?u=valdorff), 
+the [forum thread proposing primarily Protocol ETH scaling](TBD),
 and in a rawer form on
 [discord](https://discord.com/channels/405159462932971535/774497904559783947/1033959349715996702)
 both in the thread that links to and in the #governance channel starting at that point. This will be
