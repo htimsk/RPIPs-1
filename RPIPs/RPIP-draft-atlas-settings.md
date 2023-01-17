@@ -16,14 +16,14 @@ release of withdrawals.
 
 ## Motivation
 The settings will be changed to:
-- allow pent up demand to build up in the deposit pool, in expectation of large supply
+- allow pent-up demand to build up in the deposit pool, in expectation of a large supply
 - keep maximum drag in mind
-- allow easier motion of ETH from the rETH contract to the deposit pool
+- allow for easier motion of ETH from the rETH contract to the deposit pool
   - doesn't impact burning much, as that is often bot-driven
   - allows supply side to be paired more rapidly to minimize unproductive protocol ETH
 
 We believe Atlas will increase the supply rate, as we will be more efficient at minting rETH per
-unit of Node Operator investment. After withdrawals we expect a large one-time increase in supply,
+unit of Node Operator investment. After withdrawals, we expect a large one-time increase in supply,
 and we'd like to ensure we have sufficient demand such that none of that supply is "lost" to
 competing options. The large one-time increase will be driven by migrations internally from
 minipools with 16 ETH bonds to LEBs, and externally from solo validator migrations and folks that
@@ -43,7 +43,7 @@ Some level of `network.reth.collateral.target` is desireable to allow:
   that ETH to start more minipools, which further imbalances supply/demand)
 - to prevent overflowing the deposit pool at a premium, which damages the NO minipool creation arb
 
-The first only needs 32 ETH for the former to support any possible minipool size. The second just
+The first only needs 32 ETH for the former to to support any possible minipool size. The second just
 needs "enough" space to do the arb as rewards come in; note that the largest single reward seen so
 far (smoothing pool interval 3) was under 0.1% of rETH TVL, so the chosen size should be plenty.
 Finally, the last purpose can get arbitrarily large. Here we look to balance the use of arb with a
